@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Movie Database",
-    "slug": "movie-app",
+    "slug": "movie-database",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/logo.png",
@@ -12,10 +12,12 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.marinhooodev.app",
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/logo.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "versionCode": 1
     },
     "web": {
       "bundler": "metro",
@@ -27,7 +29,7 @@
       [
         "expo-splash-screen",
         {
-          "image":"./assets/images/logo.png",
+          "image": "./assets/images/logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
@@ -36,6 +38,14 @@
     ],
     "experiments": {
       "typedRoutes": false
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "e50b2f19-7671-4613-8d58-210409ddc5fb"
+      }
     }
   }
 }
