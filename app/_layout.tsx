@@ -1,11 +1,12 @@
 import { Stack } from "expo-router";
 import "./globals.css";
 import { StatusBar } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 
 export default function RootLayout() {
     return (
-        <>
-            <StatusBar hidden={true}/>
+        <SafeAreaProvider className="pb">
+            <StatusBar hidden={false} className="bg-primary"/>
             <Stack>
                 <Stack.Screen 
                 name="(tabs)"
@@ -16,6 +17,6 @@ export default function RootLayout() {
                 options={{ headerShown: false }} 
                 />
             </Stack>
-        </>
+        </SafeAreaProvider>
     );
 }
